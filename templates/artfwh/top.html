@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/artfwhTop_layout.css' %}">
+</head>
+<body style="background-color: cyan">
+<div id="container">
+    <div id="itemA" style="background-image: url( '{% static "img/IMG_0135.JPG" %}'); background-size: 200px 100px;">IMGPIC</div>
+    <div id="itemB" style="background-color:#fa8798;"><h1> From World History </h1></div>
+    <div id="itemC" style="background-color:#fa87d9;">MAINNAV<a href='https://soens.herokuapp.com/'>装苑Main</a>
+        <a href='https://basebasebase.herokuapp.com/'>Basebasebase</a></div>
+</div>
+<div id="container2">
+    <div id="itemD" style="background-color:#878dfa;">nav_A<br><br>
+        <a href="{% url 'artfwh:about' %}">arti_About</a><br>
+        <br><br>
+
+    </div>
+    <div id="itemE" style="background-color:#b5fa87;">Content_A_Card</div>
+    <div id="itemF" style="background-color:#eee20c;">Content_B_Card</div>
+    <div id="itemG" style="background-color:#0ceeaa;">Content_C_Card</div>
+    <div id="itemH" style="background-color:#0c41ee;">Content_D_Card</div>
+    <div id="itemI" style="background-color:#0ceeaa;">sideB</div>
+</div>
+<div id="container3">
+    <div id="itemJ" style="background-color:#0c41ee;">footer</div>
+</div>
+</body>
+</html>
