@@ -1,0 +1,18 @@
+{% extends 'summermodel/base.html' %}
+
+{% block content %}
+
+    <h1>一覧</h1>
+    <br>
+
+    {% for blog in blog %}
+        <ul>
+            <li>
+                {{ articles.created_at }}
+                {{ articles.title }}
+                <a href="{% url 'summermodel:detail' article_id=articles.id %}">詳細</a>
+            </li>
+        </ul>
+    {% endfor %}
+
+{% endblock %}
