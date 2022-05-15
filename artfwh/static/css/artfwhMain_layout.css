@@ -26,7 +26,7 @@ background-color: #daff7d;
 #container5 {
     display: grid; /* グリッドレイアウト */
     grid-template-rows: minmax(660px,auto);
-    grid-template-columns: 100px 930px 200px;
+    grid-template-columns: 100px 990px 200px;
 }
 #itemD {
     grid-row: 1 / 2;
