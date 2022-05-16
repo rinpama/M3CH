@@ -1,6 +1,19 @@
 {% extends 'artfwh/articles_about_base.html' %}
 {% load static %}
 
+{% block navA %}
+    {% for art in articles %}
+        <ul>
+            <li>
+                {{ art.created_at }}
+                {{ art.title }}
+                <a href="{% url 'artfwh:main' art_id=art.id %}">詳細</a>
+            </li>
+        </ul>
+    {% endfor %}
+{% endblock %}
+
+
 {% block mainA %}
     <p>
         その病気に対する十分な抵抗力を得ること
