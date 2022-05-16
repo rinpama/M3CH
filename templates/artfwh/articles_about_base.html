@@ -8,21 +8,22 @@
 </head>
 
 <body style="background-color: cyan">
+
 <div id="container4"> <!-- コンテナ -->
-    <div id="itemA" style="background-image: url( '{% static " img
-    /IMG_0135.JPG" %}'); background-size: 200px 100px;">IMGPIC
-</div>
+    <div id="itemA" style="background-image: url('{% static " img/IMG_0135.JPG" %}
+    '); background-size: 200px 100px;">IMGPIC</div>
 <div id="itemB"><h1> From World History </h1></div>
 <div id="itemC">MAINNAV</div>
 </div>
+
 <div id="container5"> <!-- コンテナ -->
     <div id="itemD">navA<br>
-        <a href="{% url 'artfwh:main' %}">main</a>
-    </div> <!-- アイテム -->
+        {% block navA %}{% endblock %}</div>
     <div id="itemE">mainA<br>{% block mainA %}{% endblock %}</div>
     <div id="itemF">mainB<br>{% block mainB %}{% endblock %}</div>
     <div id="itemG">sideB</div>
 </div>
+
 <div id="container6"> <!-- コンテナ -->
     <div id="itemH">footer<br><a href="{% url 'artfwh:artTop' %}">Top</a></div> <!-- アイテム -->
 </div>
