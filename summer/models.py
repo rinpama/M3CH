@@ -6,7 +6,6 @@ class eraM(models.Model):#要約＿年代
     era=models.CharField(max_length=30,default=' 年～')
     def __str__(self):
         return str(self.era)
-
 class genreM(models.Model):#要約＿ジャンル
     genre=models.CharField(max_length=30,default='WH')
     def __str__(self):
