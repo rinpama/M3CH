@@ -4,14 +4,15 @@
 <head>
     <meta charset="utf-8">
     <title> FWH about</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/artfwhAbout_layout.css' %}">
+    <meta name="description" content="{% block meta_description %}歴史とClassicの全体の流れに関する、自分用のノートです。{% endblock %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'artfwh/css/artfwhAbout_layout.css' %}">
 </head>
 
 <body style="background-color: cyan">
 
 <div id="container4"> <!-- コンテナ -->
-    <div id="itemA" style="background-image: url('{% static " img/IMG_0135.JPG" %}
-    '); background-size: 200px 100px;">IMGPIC</div>
+    <div id="itemA" style="background-image: url('{% static " artfwh/img/img_1.png" %}'); background-size: 200px 100px;">IMGPIC
+</div
 <div id="itemB"><h1> From World History </h1></div>
 <div id="itemC">MAINNAV</div>
 </div>
