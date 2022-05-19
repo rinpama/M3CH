@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'artfwh',
     'django_summernote',
-    'summer',
+
 
     'storages',
 ]
