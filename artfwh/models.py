@@ -1,21 +1,25 @@
 from django.db import models
-#eraM,genreM,AboutM,mainWordM,ArticleM
+#eraM,genreM,AboutM,mainWordM,ArticleM,
 
 # Create your models here.
 class eraM(models.Model):#要約＿年代
     era=models.CharField(max_length=30,default=' 年～')
+    commonname = models.CharField(max_length=30, default=' 期')
     def __str__(self):
-        return str(self.era)
+        return str(self.era) + '(' + str(self.commonname) + ')'
+
 class genreM(models.Model):#要約＿ジャンル
-    genre=models.CharField(max_length=30,default='WH')
+    genre=models.CharField(max_length=30,default='HistoryArt')
     def __str__(self):
         return str(self.genre)
 
-class AboutM(models.Model):#要約＿A＋B
+class AboutM(models.Model):#要約＿A&B
     genre = models.ForeignKey(genreM, on_delete=models.PROTECT, related_name="genre_about", null=True, blank=True)
     title=models.ForeignKey(eraM,on_delete=models.PROTECT,related_name="era_about",null=True,blank=True)
     text = models.TextField('要約')
-    textMore=models.TextField('common')
+    textMore=models.TextField('common',null=True,blank=True)
+    ArtText = models.TextField('art',null=True,blank=True)
+    MainWords=models.CharField(max_length=200,null=True,blank=True)
     create_at = models.DateField('作成日',auto_now_add=True)
     update_at= models.DateField('更新日',auto_now=True)
     def __str__(self):
