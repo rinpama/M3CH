@@ -6,12 +6,23 @@ from .models import *
 
 # Create your views here.
 def articleTop(request):
-    return render(request, 'artfwh/top.html')
+    about = AboutM.objects.order_by('-id')
+    return render(request, 'artfwh/top.html',{'about':about})
 
 
-def AboutBase(request):
-    articles = ArticleM.objects.order_by('-id')
-    return render(request, 'artfwh/article_About.html', {'articles': articles})
+def AboutBase(request,about_id):
+    params={
+        'Abou': AboutM.objects.order_by('-id'),
+        'about': get_object_or_404(AboutM, id=about_id)
+    }
+    return render(request, 'artfwh/article_About.html', params)
+
+def AboutBase2(request,number):
+    params={
+        'Abou': AboutM.objects.order_by('-id'),
+        'about2': get_object_or_404(AboutM, id=number)
+    }
+    return render(request, 'artfwh/article_About2.html', params)
 
 
 def artMain(request, art_id):

@@ -11,16 +11,15 @@
     {% endfor %}
     <hr>
     <hr>
+    <a href="{% url 'artfwh:artTop' %}">Top</a>
 
-    <a href="{% url 'artfwh:about2' number=about.id %}">CLASSIC</a>
 {% endblock %}
 
 
 {% block mainA %}
-    {{ about.title }}
-    {{ about.text | safe }}
+    {{ about2.title }}
+    {{ about2.textMore | safe }}
 {% endblock %}
 {% block mainB %}
-    {{ about.id }}
-    {{ about.textMore | safe }}
+    {{ about2.ArtText | safe }}
 {% endblock %}

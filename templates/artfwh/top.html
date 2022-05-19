@@ -10,7 +10,9 @@
 </head>
 <body style="background-color: cyan">
 <div id="container">
-        <div id="itemA" style="background-image: url('{% static "artfwh/img/IMG_0145.jpg" %}'); background-size: auto;">IMGPIC</div>
+    <div id="itemA" style="background-image: url('{% static "artfwh/img/IMG_0145.jpg" %}'); background-size: auto;">
+        IMGPIC
+    </div>
     <div id="itemB" style="background-color:#fa8798;"><h1> From World History </h1></div>
     <div id="itemC" style="background-color:#fa87d9;">
         <div id="itemc1">
@@ -21,13 +23,22 @@
     </div>
 </div>
 <div id="container2">
-    <div id="itemD" style="background-color:#878dfa;">nav_A<br><br>
-        <a href="{% url 'artfwh:about' %}">arti_About</a><br>
+    <div id="itemD" style="background-color:#878dfa;">
+        nav_A
+        {#        <br><br>#}
+        {#        <a href="{% url 'artfwh:about' %}">arti_About</a><br>#}
         <br><br>
+        {% for about in about %}
+            <ul style="list-style-type: none; padding:0px;">
+                <li>
+                    <a href="{% url 'artfwh:about' about_id=about.id %}">{{ about.title.era }}</a>
+                </li>
+            </ul>
+        {% endfor %}
 
     </div>
     <div id="itemE" style="background-color:#b5fa87;">
-            <h1>Content_A_Card</h1>
+        <h1>Content_A_Card</h1>
     </div>
     <div id="itemF" style="background-color:#eee20c;">
         <h3>Content_B_Card</h3>
