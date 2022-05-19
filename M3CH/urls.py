@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
     path('', include('artfwh.urls')),
-    # path('summer/', include('summer.urls')),
+
 
 ]
 if settings.DEBUG:

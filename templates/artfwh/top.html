@@ -1,17 +1,24 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/artfwhTop_layout.css' %}">
+    <meta name="description" content="{% block meta_description %}歴史とClassicに関する、自分用のノートです。{% endblock %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'artfwh/css/artfwhTop_layout.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'artfwh/img' %}">
 </head>
 <body style="background-color: cyan">
 <div id="container">
-    <div id="itemA" style="background-image: url( '{% static "img/IMG_0135.JPG" %}'); background-size: 200px 100px;">IMGPIC</div>
+        <div id="itemA" style="background-image: url('{% static "artfwh/img/IMG_0145.jpg" %}'); background-size: auto;">IMGPIC</div>
     <div id="itemB" style="background-color:#fa8798;"><h1> From World History </h1></div>
-    <div id="itemC" style="background-color:#fa87d9;">MAINNAV<a href='https://soens.herokuapp.com/'>装苑Main</a>
-        <a href='https://basebasebase.herokuapp.com/'>Basebasebase</a></div>
+    <div id="itemC" style="background-color:#fa87d9;">
+        <div id="itemc1">
+            <div style="width:200px;">MAINNAV</div>
+            <div style="width:200px;"><a href='https://soens.herokuapp.com/'>装苑Main</a></div>
+            <div style="width:200px;"><a href='https://basebasebase.herokuapp.com/'>Basebasebase</a></div>
+        </div>
+    </div>
 </div>
 <div id="container2">
     <div id="itemD" style="background-color:#878dfa;">nav_A<br><br>
@@ -19,8 +26,12 @@
         <br><br>
 
     </div>
-    <div id="itemE" style="background-color:#b5fa87;">Content_A_Card</div>
-    <div id="itemF" style="background-color:#eee20c;">Content_B_Card</div>
+    <div id="itemE" style="background-color:#b5fa87;">
+            <h1>Content_A_Card</h1>
+    </div>
+    <div id="itemF" style="background-color:#eee20c;">
+        <h3>Content_B_Card</h3>
+    </div>
     <div id="itemG" style="background-color:#0ceeaa;">Content_C_Card</div>
     <div id="itemH" style="background-color:#0c41ee;">Content_D_Card</div>
     <div id="itemI" style="background-color:#0ceeaa;">sideB</div>
